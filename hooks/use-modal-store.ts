@@ -1,5 +1,4 @@
-import { ChannelType, Server } from "@prisma/client";
-import { Channel } from "diagnostics_channel";
+import { ChannelType, Server, Channel } from "@prisma/client";
 import { set } from "zod";
 import { create } from "zustand";
 

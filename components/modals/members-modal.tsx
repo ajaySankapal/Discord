@@ -13,7 +13,7 @@ import {
   ShieldQuestion,
 } from "lucide-react";
 import { useState } from "react";
-import { MemberRole } from "@prisma/client";
+import { MemberRole, Profile } from "@prisma/client";
 import { useRouter } from "next/navigation";
 
 import {
@@ -40,7 +40,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import UserAvatar from "../user-avatar";
 
-const roleIconMap = {
+const roleIconMap: any = {
   GUEST: null,
   MODERATOR: <ShieldCheck className="h-4 w-4 ml-2 text-indigo-500" />,
   ADMIN: <ShieldAlert className="h-4 w-4 text-rose-500" />,
@@ -108,7 +108,7 @@ export const MembersModal = () => {
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="mt-8 max-h-[420px] pr-6">
-          {server?.members?.map((member) => (
+          {server?.members?.map((member: any) => (
             <div key={member.id} className="flex items-center gap-x-2 mb-6">
               <UserAvatar src={member.profile.imageUrl} />
               <div className="flex flex-col gap-y-1">
